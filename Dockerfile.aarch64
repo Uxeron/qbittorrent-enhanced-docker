@@ -78,6 +78,7 @@ RUN apk add \
    openssl \
    qt5-qtbase-sqlite \
    qt5-qtsvg \
+   python3 \
    re2c \
    libtool \
    zlib
