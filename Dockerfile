@@ -40,7 +40,7 @@ RUN curl -sNLk https://boostorg.jfrog.io/artifactory/main/release/1.76.0/source/
 
 # Build and install Libtorrent
 RUN git clone --shallow-submodules --recurse-submodules https://github.com/arvidn/libtorrent.git ~/libtorrent && cd ~/libtorrent && \
-   git checkout "$(git tag -l --sort=-v:refname "v2*" | head -n 1)" && \
+   git checkout "$(git tag -l --sort=-v:refname "v1*" | head -n 1)" && \
    cmake -Wno-dev -G Ninja -B build \
       -D CMAKE_BUILD_TYPE="Release" \
       -D CMAKE_CXX_STANDARD=17 \
