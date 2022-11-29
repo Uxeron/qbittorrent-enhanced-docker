@@ -1,4 +1,4 @@
-FROM alpine AS Build
+FROM alpine:3.16 AS Build
 
 # Build instructions used from https://github.com/qbittorrent/qBittorrent/wiki/Compilation:-Alpine-Linux
 # Install build dependencies
@@ -63,7 +63,7 @@ RUN git clone --shallow-submodules --recurse-submodules https://github.com/c0re1
    cmake --build build
 
 
-FROM alpine
+FROM alpine:3.16
 
 # All config files go to /config instead of multiple separate folders
 ENV HOME="/config" \
